@@ -1,0 +1,19 @@
+# systemd user service (runs in your desktop session, so notify-send and sound work).
+# Install:
+#   mkdir -p ~/.outageguard ~/.config/systemd/user
+#   cp build/libs/outageguard.jar ~/.outageguard/
+#   cp scripts/outageguard.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload && systemctl --user enable --now outageguard
+# Logs: journalctl --user -u outageguard -f   (or ~/.outageguard/outageguard.log)
+[Unit]
+Description=OutageGuard - shut down PC before scheduled power outages
+After=graphical-session.target network-online.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/env java -jar %h/.outageguard/outageguard.jar
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=graphical-session.target

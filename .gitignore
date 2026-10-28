@@ -1,0 +1,66 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.kotlin
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### IntelliJ IDEA (per-user files) ###
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf/
+.idea/tasks.xml
+.idea/dictionaries/
+
+### Mac OS ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
+desktop.ini
+
+### Linux ###
+*~
+
+### OutageGuard runtime files (if run with a custom home in the project) ###
+*.log
+*.log.old
+schedule-cache*.json
+instance.lock
+
+### Claude Code local settings ###
+.claude/settings.local.json
