@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "com.feelsolazy"
+group = "com.feelsolazy.outageguard"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -32,7 +32,7 @@ tasks.withType<JavaCompile> {
 // Self-contained runnable jar: build/libs/outageguard.jar
 tasks.jar {
     archiveFileName = "outageguard.jar"
-    manifest { attributes["Main-Class"] = "com.feelsolazy.Main" }
+    manifest { attributes["Main-Class"] = "com.feelsolazy.outageguard.Main" }
     from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
     // Signatures and per-library module descriptors don't apply to the merged jar.
     exclude("META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "module-info.class", "META-INF/versions/*/module-info.class")
@@ -44,7 +44,7 @@ val generateIcons = tasks.register<JavaExec>("generateIcons") {
     description = "Generates build/icons/icon.ico and icon.png from Icons.java"
     val iconDir = layout.buildDirectory.dir("icons")
     classpath = sourceSets.main.get().runtimeClasspath
-    mainClass = "com.feelsolazy.Icons"
+    mainClass = "com.feelsolazy.outageguard.Icons"
     args(iconDir.get().asFile.absolutePath)
     jvmArgs("-Djava.awt.headless=true")
     inputs.files(sourceSets.main.get().output)

@@ -1,4 +1,4 @@
-package com.feelsolazy;
+package com.feelsolazy.outageguard;
 
 import org.junit.jupiter.api.Test;
 

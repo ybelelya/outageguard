@@ -1,4 +1,4 @@
-package com.feelsolazy;
+package com.feelsolazy.outageguard;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;

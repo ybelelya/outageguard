@@ -1,4 +1,4 @@
-package com.feelsolazy;
+package com.feelsolazy.outageguard;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
